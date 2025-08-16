@@ -1,7 +1,6 @@
-// src/components/logo.tsx
 import Image from 'next/image';
 
-export function Logo() {
+export function Logo(props: React.ComponentProps<'img'>) {
   return (
     <Image
       src="/inflowcash.jpg"
@@ -9,6 +8,7 @@ export function Logo() {
       height={40}
       alt="InFlowCash Logo"
       className="rounded-md"
+      {...props}
     />
   );
 }
