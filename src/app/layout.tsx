@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -12,18 +12,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} font-body antialiased`}>
         {children}
-        <Script 
+        <Script
           src="https://www.paypal.com/sdk/js?client-id=AdPrczcDw7Pi_U-InZM8FqupTyyCEXQEdCGii3Jnkxg1wy_ijVqoCzmMsK-vAgNC5Bt3vRNPYPsPSYg4&components=hosted-buttons"
           strategy="lazyOnload"
         />
-        <Script 
+        <Script
           src="https://unpkg.com/@elevenlabs/convai-widget-embed"
           strategy="lazyOnload"
         />
